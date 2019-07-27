@@ -1,3 +1,2 @@
-let thing3 = document.getElementById('thing3')
-
-thing3.style.color = 'blue'
+console.log('Hello you found my secret message..')
+console.log('\\ (•◡•) /')
