@@ -1,6 +1,9 @@
 ### Sam Murphy, PhD
 
-- Founder & CEO Earthscope
-- Entrepreneur First (LD11)
+- Earthscope Founder & CEO
 - NASA and Google Postdocs
+- PhD Earth Observation
+- Satellite Image Processing
 - Google Earth Engine Award
+- Machine Learning (prize winner)
+- Geovation (UK gov. grant winner) 

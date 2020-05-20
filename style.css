@@ -4,25 +4,55 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* standard look */
+
 .container{
     display: grid;
     grid-template-columns: 1fr;
     grid-gap:1em;
 }
 
-.container .name {
+.container h1 {
     font-family: 'Montserrat', sans-serif;
     justify-self: center;
     color: rgb(41, 40, 40);
     padding-top:2em;
-    
 }
 
-.container .item {
+.container .text {
     color: rgb(80, 77, 77);
     justify-self: center;
     align-self: center;
+    padding: 0.2rem;
+    margin:0
 }
+
+.container .social {
+  justify-self: center;
+  align-self: center;
+}
+
+/* interactivity */
+
+.container .text:hover {
+  background-color: rgb(216, 245, 239);
+}
+
+.container .text a:link{
+  text-decoration: none;
+  color: rgb(80, 77, 77);
+}
+
+.container .text a:visited{
+  text-decoration: none;
+  color: rgb(80, 77, 77);
+}
+
+.container .text a:focus{
+  outline:0;
+  border:none
+}
+
 
 /* 
   font awesome social icons
@@ -31,7 +61,7 @@ body {
 
 .fa {
     padding: 20px;
-    font-size: 30px;
+    font-size: 50px;
     width: 20px;
     text-align: center;
     text-decoration: none;
@@ -51,16 +81,12 @@ body {
     background: rgb(48, 48, 48);
     color: white;
   }
- 
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
+
   .fa-twitter {
     background: #55ACEE;
     color: white;
   }
   
  
+
 
