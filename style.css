@@ -16,7 +16,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     justify-self: center;
     color: rgb(41, 40, 40);
-    padding-top:2em;
 }
 
 .container .text {
@@ -25,6 +24,13 @@ body {
     align-self: center;
     padding: 0.2rem;
     margin:0
+}
+
+.container .image {
+  justify-self: center;
+  align-self: center;
+  padding: 0.2rem;
+  margin:0
 }
 
 .container .social {
