@@ -26,21 +26,6 @@ body {
     margin:0
 }
 
-.container .image {
-  justify-self: center;
-  align-self: center;
-  padding: 0.2rem;
-  margin:0
-}
-
-.container .social {
-  margin-top:1rem;
-  justify-self: center;
-  align-self: center
-}
-
-/* interactivity */
-
 .container .text:hover {
   background-color: rgb(216, 245, 239);
 }
@@ -58,6 +43,27 @@ body {
 .container .text a:focus{
   outline:0;
   border:none
+}
+
+.container .image {
+  justify-self: center;
+  align-self: center;
+  padding: 0.2rem;
+  margin:0
+}
+
+.container .box {
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+  margin:1rem
+}
+
+
+.container .social {
+  margin-top:1rem;
+  justify-self: center;
+  align-self: center
 }
 
 

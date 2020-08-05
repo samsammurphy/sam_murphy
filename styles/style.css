@@ -1,0 +1,43 @@
+h4 {
+    color: rgb(94, 94, 94);
+}
+
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+.fa {
+  padding: 20px;
+  width: 30px;
+  height:20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  /* border-radius: 50%; */
+}
+  
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: rgb(48, 48, 48);
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+
