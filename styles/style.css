@@ -2,14 +2,6 @@ h4 {
     color: rgb(94, 94, 94);
 }
 
-
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-}
-
 .fa {
   padding: 20px;
   width: 30px;
@@ -40,4 +32,10 @@ footer {
 }
 
 
+canvas {
+    border: 1px solid black;
+    /* background: rgb(243, 183, 163); */
+    height: 100%;
+    width: 100%;
+}
 
