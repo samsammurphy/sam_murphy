@@ -1,6 +1,3 @@
-
-const RADIUS = 30
-const SPEED = 1
 const NUMBALLS = 10
 
 // canvas DOM element
@@ -185,11 +182,11 @@ function Ball(location, radius, direction, speed){
 }
 
 // random balls
-function someBalls(num, radius, speed) {
+function someBalls(numBalls, radius, nominalSpeed) {
 
     let balls = []
 
-    for (var i = 0; i < num; i++) {
+    for (var i = 0; i < numBalls; i++) {
 
         let random_location = {
             x: Math.random() * canvas.width,
@@ -202,8 +199,8 @@ function someBalls(num, radius, speed) {
         }
 
         let random_speed = {
-            x: Math.max(SPEED * Math.random(), SPEED / 4),
-            y: Math.max(SPEED * Math.random(), SPEED / 4)
+            x: Math.max(nominalSpeed * Math.random(), nominalSpeed / 4),
+            y: Math.max(nominalSpeed * Math.random(), nominalSpeed / 4)
         }
 
         balls.push(new Ball(random_location, radius, random_direction, random_speed))
@@ -214,8 +211,11 @@ function someBalls(num, radius, speed) {
 
 function main() {
 
+    let radius = canvas.width / 30
+    let nominalSpeed = 1
+
     // get some balls
-    let balls = someBalls(NUMBALLS, RADIUS, SPEED)
+    let balls = someBalls(NUMBALLS, radius, nominalSpeed)
 
     // a circle that bounces around the screen
     function play() {
