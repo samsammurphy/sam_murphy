@@ -211,7 +211,7 @@ function someBalls(numBalls, radius, nominalSpeed) {
 
 function main() {
 
-    let radius = canvas.width / 30
+    let radius = canvas.width / 20
     let nominalSpeed = 1
 
     // get some balls
