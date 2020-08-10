@@ -18,11 +18,12 @@ const c = canvas.getContext('2d')
 let mouse = {
     x: undefined,
     y: undefined,
-    inCanvas: false
+    inCanvas: false,
+    down: false
 }
 
 // mouse event listener
-window.addEventListener('mousemove',
+window.addEventListener('mousedown',
     function (event) {
         // event position is relative to window
         // mouse position is relative to canvas
@@ -35,7 +36,13 @@ window.addEventListener('mousemove',
             (event.y < rect.bottom) &&
             (event.y > rect.top)
 
+        mouse.down = true
+
     }
+)
+
+window.addEventListener('mouseup',
+    function (event) {mouse.down = false}
 )
 
 // resize event listener
@@ -61,7 +68,7 @@ function circle(x, y, r, color) {
 }
 
 // a ball object (for bouncing around in the canvas)
-function Ball(location, radius, direction, speed, color = 'cyan') {
+function Ball(location, radius, direction, speed){
 
     // PROPERTIES
     // ----------
@@ -70,7 +77,7 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
     x = _.clamp(location.x, radius, canvas.width - radius)
     y = _.clamp(location.y, radius, canvas.height - radius)
 
-    // geometry
+    // ball geometry
     this.x = x;
     this.y = y;
     this.radius = radius
@@ -83,33 +90,40 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
     this.colors = ['#086972', '#01a9b4', '#87dfd6', '#fbfd8a'] //https://colorhunt.co/palette/196303
     this.color = this.colors[Math.floor(Math.random() * this.colors.length)]
 
-    // interact growth
+    // interact growth / shrinking
     this.originalRadius = this.radius
     this.maxRadius = this.radius * 4
     this.growthRate = 2
 
-    // interactive speed
-    this.originalSpeed = this.speed
+    // interactive acceleration / decelaration
+    this.originalSpeedX = this.speed.x
+    this.originalSpeedY = this.speed.y
     this.maxSpeed = 20
-    this.acceleration = 1.1
-    this.deceleration = 0.5
+    this.acceleration = 1.2
+    this.deceleration = 1.005
 
     // METHODS
     // -------
 
     this.draw = () => circle(this.x, this.y, this.radius, this.color)
 
+    // check if ball is horizontally out
+    this.outX = () => (this.x + this.radius > canvas.width ||
+                      this.x - this.radius < 0)
+
+    // check if ball is vertically out
+    this.outY = () => (this.y + this.radius > canvas.height ||
+        this.y - this.radius < 0)
+    
     this.move = function () {
 
         // x direction
-        if (this.x + this.radius > canvas.width ||
-            this.x - this.radius < 0) {
+        if (this.outX()) {
             this.direction.x = -this.direction.x
         }
 
         // y direction
-        if (this.y + this.radius > canvas.height ||
-            this.y - this.radius < 0) {
+        if (this.outY()) {
             this.direction.y = -this.direction.y
         }
 
@@ -117,6 +131,7 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
         this.x += this.direction.x * this.speed.x
         this.y += this.direction.y * this.speed.y
     }
+
 
     this.grow = () => {
         if (this.radius < this.maxRadius) {
@@ -140,11 +155,11 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
     }
 
     this.decelerate = () => {
-
-        if (this.speed.x > this.originalSpeed.x) {
+        
+        if (this.speed.x > this.originalSpeedX) {
             this.speed.x /= this.deceleration
         }
-        if (this.speed.y > this.originalSpeed.y) {
+        if (this.speed.y > this.originalSpeedY) {
             this.speed.y /= this.deceleration
         }
     }
@@ -154,7 +169,7 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
         let mouseDistance = Math.sqrt((mouse.x - this.x) ** 2 + (mouse.y - this.y) ** 2)
 
         let mouseOverBall = mouseDistance < this.radius
-        let mouseActive = mouseOverBall && mouse.inCanvas
+        let mouseActive = mouseOverBall && mouse.down && mouse.inCanvas
 
         if (mouseActive) {
             this.grow()
@@ -163,8 +178,9 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
 
         if (!(mouseActive)) {
             this.shrink()
-            this.decelerate()
+            // this.decelerate()
         }
+
     }
 }
 
@@ -172,7 +188,6 @@ function Ball(location, radius, direction, speed, color = 'cyan') {
 function someBalls(num, radius, speed) {
 
     let balls = []
-    let colors = ["rgba(255,0,0, 0.5)", "rgba(0,255,0, 0.5)", "rgba(0,0,255, 0.5)"]
 
     for (var i = 0; i < num; i++) {
 
@@ -191,7 +206,7 @@ function someBalls(num, radius, speed) {
             y: Math.max(SPEED * Math.random(), SPEED / 4)
         }
 
-        balls.push(new Ball(random_location, radius, random_direction, random_speed, color = colors[i]))
+        balls.push(new Ball(random_location, radius, random_direction, random_speed))
     }
 
     return balls
