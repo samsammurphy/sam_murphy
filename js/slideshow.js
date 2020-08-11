@@ -1,31 +1,42 @@
-// slide index variable
-var slideIndex = 0;
 
-// display first slide
-displaySlide(slideIndex);
+function Slideshow(slideClassName){
+    
+    // slide class name
+    this.slideClassName = slideClassName
 
-function displaySlide(newIndex) {
+    // slide elements
+    this.slides = document.getElementsByClassName(this.slideClassName);
 
-    // find slide collection
-    var x = document.getElementsByClassName("mySlides");
+    // slide index to display
+    this.slideIndex = 0;
 
-    // slide index is cyclical
-    if (newIndex > x.length - 1) { newIndex = 0 };
-    if (newIndex < 0) { newIndex = x.length - 1 };
-
-    // update slide index
-    slideIndex = newIndex
-
-    // hide all slides
-    for (var i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    // event listener
+    this.changeSlide =function(increment) {
+        this.displaySlide(this.slideIndex += increment);
     }
 
-    // show target slide
-    x[slideIndex].style.display = "block";
+    this.displaySlide = function (newIndex) {
+
+        // slide index is cyclical
+        if (newIndex > this.slides.length - 1) { newIndex = 0 };
+        if (newIndex < 0) { newIndex = this.slides.length - 1 };
+
+        // update slide index
+        this.slideIndex = newIndex
+
+        // hide all slides
+        for (var i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.display = "none";
+        }
+
+        // show target slide
+        this.slides[this.slideIndex].style.display = "block";
+    }
+
+    // display first slide
+    this.displaySlide(0);
 }
 
-// button click event listener
-function changeSlide(increment) {
-    displaySlide(slideIndex += increment);
-}
+let imageSlideshow = new Slideshow("imageSlides")
+let timeSeriesSlideshow = new Slideshow("timeSeriesSlides")
+

@@ -57,28 +57,28 @@
         <div class="w3-content w3-display-container">
         
         
-          <div class="w3-display-container mySlides">
+          <div class="w3-display-container imageSlides">
             <img src="images/slides/visible.png" style="width:100%">
             <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
               Visible
             </div>
           </div>
         
-          <div class="w3-display-container mySlides">
+          <div class="w3-display-container imageSlides">
             <img src="images/slides/infrared.png" style="width:100%">
             <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
               Infrared
             </div>
           </div>
         
-          <div class="w3-display-container mySlides">
+          <div class="w3-display-container imageSlides">
             <img src="images/slides/color_spaces.png" style="width:100%">
             <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
               Colour Spaces
             </div>
           </div>
         
-          <div class="w3-display-container mySlides">
+          <div class="w3-display-container imageSlides">
             <img src="images/slides/physics.png" style="width:100%">
             <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
               Physics 1st Principles
@@ -86,8 +86,8 @@
           </div>
           
         
-          <button class="w3-button w3-black w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="changeSlide(1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" onclick="imageSlideshow.changeSlide(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="imageSlideshow.changeSlide(1)">&#10095;</button>
           
         </div>
       </div>
@@ -121,9 +121,29 @@
         <p>Time Series</p>
       </div>
     
-      <!-- <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner"> -->
-    
-      <p>insert time series here </p>
+        <!-- slideshow -->
+        <div class="w3-content w3-display-container">
+        
+        
+          <div class="w3-display-container timeSeriesSlides">
+            <img src="images/slides/wavelet.png" style="width:100%">
+            <div class="w3-display-topright w3-container w3-large w3-padding-16 w3-green">
+              Wavelets
+            </div>
+          </div>
+        
+          <div class="w3-display-container timeSeriesSlides">
+            <img src="images/slides/multivariate.png" style="width:100%">
+            <div class="w3-display-topright w3-container w3-large w3-padding-16 w3-green">
+              Multivariate
+            </div>
+          </div>
+        
+        
+          <button class="w3-button w3-black w3-display-left" onclick="timeSeriesSlideshow.changeSlide(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="timeSeriesSlideshow.changeSlide(1)">&#10095;</button>
+        
+        </div>
     
     </div>
     </div>
