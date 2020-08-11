@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Press+Start+2P&display=swap"
-        rel="stylesheet">
+      rel="stylesheet">
+    
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Sam Murphy</title>
 </head>
@@ -30,83 +41,128 @@
 
   <!-- content -->
   <div class='container'>
+
+
+    <!-- image processing -->
+    <div class="row mb-3">
+
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+      
+        <div class="section_title">
+          <p>Image Processing</p>
+        </div>
+          
+        <!-- slideshow -->
+        <div class="w3-content w3-display-container">
+        
+        
+          <div class="w3-display-container mySlides">
+            <img src="images/slides/visible.png" style="width:100%">
+            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+              Visible
+            </div>
+          </div>
+        
+          <div class="w3-display-container mySlides">
+            <img src="images/slides/infrared.png" style="width:100%">
+            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+              Infrared
+            </div>
+          </div>
+        
+          <div class="w3-display-container mySlides">
+            <img src="images/slides/color_spaces.png" style="width:100%">
+            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+              Colour Spaces
+            </div>
+          </div>
+        
+          <div class="w3-display-container mySlides">
+            <img src="images/slides/physics.png" style="width:100%">
+            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+              Physics 1st Principles
+            </div>
+          </div>
+          
+        
+          <button class="w3-button w3-black w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="changeSlide(1)">&#10095;</button>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- purple prize -->
     <div class="row">
 
-      <!-- purple prize -->
       <div class="col-sm-12">
-
+      
         <div class="section_title">
           <p>Machine Learning Winners</p>
         </div>
-
+      
         <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner">
-
-        <p>We used Machine Learning to win the 
-          <a href="https://purplemaia.org/purple-prize-2017-winners/" target="_blank" rel="noopener noreferrer">Purple Prize</a>
+      
+        <p>We used Machine Learning to win the
+          <a href="https://purplemaia.org/purple-prize-2017-winners/" target="_blank" rel="noopener noreferrer">Purple
+            Prize</a>
         </p>
-
+      
       </div>
+    </div>
 
 
-      <!-- image processing -->
-      <div class="col-sm-12">
-
-          <div class="section_title">
-            <p>Image Processing</p>
-          </div>
-  
-          <p>Insert video here</p> 
-  
+    <!-- time series -->
+    <div class="row">
+    <div class="col-sm-12">
+    
+      <div class="section_title">
+        <p>Time Series</p>
       </div>
+    
+      <!-- <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner"> -->
+    
+      <p>insert time series here </p>
+    
+    </div>
+    </div>
 
 
+    <!-- cloud + monte carlo-->
+    <div class="row">
 
-      <!-- time series -->
-      <div class="col-sm-12">
-
-          <div class="section_title">
-            <p>Time Series</p>
-          </div>
-  
-          <!-- <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner"> -->
-  
-          <p>insert time series here </p>
-  
-      </div>
-  
-
+    
       <!-- cloud -->
-      <div class="col-md-6">
-
+      <div class="col-sm-6">
+    
         <div class="section_title">
           <p>Cloud</p>
         </div>
-
+      
         <div class="my-2">
           <img class="img-fluid" src="./images/gcloud.svg" alt="machine learning winner">
           <img class="img-fluid" src="./images/aws.svg" alt="machine learning winner">
         </div>
+      </div>
 
-       </div>
-
-
-
-
-
+    
       <!-- monte carlo -->
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div class="section_title">
           <p>Monte Carlo Simulations</p>
         </div>
-
+      
         <a href="https://agile-harbor-40313.herokuapp.com/" target="_blank" rel="noopener noreferrer">
           <img id="monteCarloImage" class="img-fluid" src="images/monte_carlo.png" alt="monte carlo">
         </a>
-
+      
       </div>
 
     </div>
+
   </div>
 
+  <script src="js/slideshow.js"></script>
 </body>
 </html>
