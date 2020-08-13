@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 h2 {
   color: rgb(94, 94, 94);
 }
@@ -27,12 +31,15 @@ h4 {
   height:20px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin-left: 3px;
+  margin-right: 3px;
   /* border-radius: 50%; */
 }
   
 .fa:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+  color:white;
+  text-decoration: none;
 }
 
 .fa-linkedin {
@@ -45,14 +52,8 @@ h4 {
   color: white;
 }
 
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
 
 canvas {
-    /* border: 1px solid black; */
     background: rgb(236, 224, 219);
     height: 100%;
     width: 100%;
@@ -75,4 +76,26 @@ canvas {
 img { 
   width: 100%; 
   display: block; 
+}
+
+
+/* footer solution */
+/* https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 65px;    /* Footer height + margin*/
+  width: 100%;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;            /* Footer height */
+  background-color: #A7E2E3;
 }

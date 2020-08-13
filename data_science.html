@@ -27,162 +27,179 @@
 
 <body>
 
-  <!-- title -->
-  <div class="container">
-      <div style='height:100px'></div>
-      <h1><a href="index.html">Sam Murphy</a></h1>
-  </div>
+<!-- footer solution -->
+<div id="page-container">
+  <div id="content-wrap">
 
-  <!-- subtitle -->
-  <div class="container">
-      <h4>Machine Learning and Data Science</h4>
-      <div style='height:20px'></div>
-  </div>
+<!-- title -->
+<div class="container">
+    <div style='height:100px'></div>
+    <h1><a href="index.html">Sam Murphy</a></h1>
+</div>
 
-  <!-- content -->
-  <div class='container'>
+<!-- subtitle -->
+<div class="container">
+    <h4>Machine Learning and Data Science</h4>
+    <div style='height:20px'></div>
+</div>
+
+<!-- content -->
+<div class='content container'>
 
 
-    <!-- image processing -->
-    <div class="row mb-3">
+  <!-- image processing -->
+  <div class="row mb-3">
 
-      <div class="col-lg-1"></div>
-      <div class="col-lg-10">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+    
+      <div class="section_title">
+        <p>Image Processing</p>
+      </div>
+        
+      <!-- slideshow -->
+      <div class="w3-content w3-display-container">
       
-        <div class="section_title">
-          <p>Image Processing</p>
+      
+        <div class="w3-display-container imageSlides">
+          <img src="images/slides/visible.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Visible
+          </div>
         </div>
-          
-        <!-- slideshow -->
-        <div class="w3-content w3-display-container">
-        
-        
-          <div class="w3-display-container imageSlides">
-            <img src="images/slides/visible.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Visible
-            </div>
+      
+        <div class="w3-display-container imageSlides">
+          <img src="images/slides/infrared.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Infrared
           </div>
-        
-          <div class="w3-display-container imageSlides">
-            <img src="images/slides/infrared.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Infrared
-            </div>
-          </div>
-        
-          <div class="w3-display-container imageSlides">
-            <img src="images/slides/color_spaces.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Colour Spaces
-            </div>
-          </div>
-        
-          <div class="w3-display-container imageSlides">
-            <img src="images/slides/physics.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Physics 1st Principles
-            </div>
-          </div>
-          
-        
-          <button class="w3-button w3-black w3-display-left" onclick="imageSlideshow.changeSlide(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="imageSlideshow.changeSlide(1)">&#10095;</button>
-          
         </div>
+      
+        <div class="w3-display-container imageSlides">
+          <img src="images/slides/color_spaces.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Colour Spaces
+          </div>
+        </div>
+      
+        <div class="w3-display-container imageSlides">
+          <img src="images/slides/physics.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Physics 1st Principles
+          </div>
+        </div>
+        
+      
+        <button class="w3-button w3-black w3-display-left" onclick="imageSlideshow.changeSlide(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="imageSlideshow.changeSlide(1)">&#10095;</button>
+        
       </div>
     </div>
+  </div>
 
-    <!-- purple prize -->
-    <div class="row">
+  <!-- purple prize -->
+  <div class="row">
 
-      <div class="col-sm-12">
-      
-        <div class="section_title">
-          <p>Machine Learning Winners</p>
-        </div>
-      
-        <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner">
-      
-        <p>We used Machine Learning to win the
-          <a href="https://purplemaia.org/purple-prize-2017-winners/" target="_blank" rel="noopener noreferrer">Purple
-            Prize</a>
-        </p>
-      
-      </div>
-    </div>
-
-
-    <!-- time series -->
-    <div class="row">
     <div class="col-sm-12">
     
       <div class="section_title">
-        <p>Time Series</p>
+        <p>Machine Learning Winners</p>
       </div>
     
-        <!-- slideshow -->
-        <div class="w3-content w3-display-container">
-        
-        
-          <div class="w3-display-container timeSeriesSlides">
-            <img src="images/slides/wavelet.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Wavelets
-            </div>
-          </div>
-        
-          <div class="w3-display-container timeSeriesSlides">
-            <img src="images/slides/multivariate.png" style="width:100%">
-            <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
-              Multivariate
-            </div>
-          </div>
-        
-        
-          <button class="w3-button w3-black w3-display-left" onclick="timeSeriesSlideshow.changeSlide(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="timeSeriesSlideshow.changeSlide(1)">&#10095;</button>
-        
-        </div>
+      <img class="img-fluid" src="./images/dream_team.png" alt="machine learning winner">
+    
+      <p>We used Machine Learning to win the
+        <a href="https://purplemaia.org/purple-prize-2017-winners/" target="_blank" rel="noopener noreferrer">Purple
+          Prize</a>
+      </p>
     
     </div>
+  </div>
+
+
+  <!-- time series -->
+  <div class="row">
+  <div class="col-sm-12">
+  
+    <div class="section_title">
+      <p>Time Series</p>
+    </div>
+  
+      <!-- slideshow -->
+      <div class="w3-content w3-display-container">
+      
+      
+        <div class="w3-display-container timeSeriesSlides">
+          <img src="images/slides/wavelet.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Wavelets
+          </div>
+        </div>
+      
+        <div class="w3-display-container timeSeriesSlides">
+          <img src="images/slides/multivariate.png" style="width:100%">
+          <div class="w3-display-middle w3-container w3-large w3-padding-16 w3-green">
+            Multivariate
+          </div>
+        </div>
+      
+      
+        <button class="w3-button w3-black w3-display-left" onclick="timeSeriesSlideshow.changeSlide(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="timeSeriesSlideshow.changeSlide(1)">&#10095;</button>
+      
+      </div>
+  
+  </div>
+  </div>
+
+
+  <!-- cloud + monte carlo-->
+  <div class="row">
+
+  
+    <!-- cloud -->
+    <div class="col-sm-6">
+  
+      <div class="section_title">
+        <p>Cloud</p>
+      </div>
+    
+      <div class="my-2">
+        <img class="img-fluid" src="./images/gcloud.svg" alt="machine learning winner">
+        <img class="img-fluid" src="./images/aws.svg" alt="machine learning winner">
+      </div>
     </div>
 
-
-    <!-- cloud + monte carlo-->
-    <div class="row">
-
-    
-      <!-- cloud -->
-      <div class="col-sm-6">
-    
-        <div class="section_title">
-          <p>Cloud</p>
-        </div>
-      
-        <div class="my-2">
-          <img class="img-fluid" src="./images/gcloud.svg" alt="machine learning winner">
-          <img class="img-fluid" src="./images/aws.svg" alt="machine learning winner">
-        </div>
+  
+    <!-- monte carlo -->
+    <div class="col-sm-6">
+      <div class="section_title">
+        <p>Monte Carlo Simulations</p>
       </div>
-
     
-      <!-- monte carlo -->
-      <div class="col-sm-6">
-        <div class="section_title">
-          <p>Monte Carlo Simulations</p>
-        </div>
-      
-        <a href="https://agile-harbor-40313.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-          <img id="monteCarloImage" class="img-fluid" src="images/monte_carlo.png" alt="monte carlo">
-        </a>
-      
-      </div>
-
+      <a href="https://agile-harbor-40313.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+        <img id="monteCarloImage" class="img-fluid" src="images/monte_carlo.png" alt="monte carlo">
+      </a>
+    
     </div>
 
   </div>
 
-  <script src="js/slideshow.js"></script>
+</div>
+
+</div> <!-- "content-wrap" -->
+
+<!-- footer at bottom of page -->
+<!-- https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ -->
+<footer id="footer" class="footer py-2">
+  <div class="row align-items-center justify-content-center">
+    <a class="fa fa-linkedin" href="https://www.linkedin.com/in/samsammurphy/" target="_blank"
+      rel="noopener noreferrer"></a>
+    <a class="fa fa-github" href="https://github.com/samsammurphy" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+</footer>
+
+</div> <!-- page-container -->
+<script src="js/slideshow.js"></script>
 </body>
 </html>
