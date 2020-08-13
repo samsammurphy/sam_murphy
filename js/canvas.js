@@ -35,11 +35,13 @@ window.addEventListener('mousedown',
 
         mouse.down = true
 
+        console.log(mouse)
+
     }
 )
 
 window.addEventListener('mouseup',
-    function (event) {mouse.down = false}
+    function (event) { mouse.down = false }
 )
 
 // resize event listener
@@ -65,7 +67,7 @@ function circle(x, y, r, color) {
 }
 
 // a ball object (for bouncing around in the canvas)
-function Ball(location, radius, direction, speed){
+function Ball(location, radius, direction, speed) {
 
     // PROPERTIES
     // ----------
@@ -96,7 +98,7 @@ function Ball(location, radius, direction, speed){
     this.originalSpeedX = this.speed.x
     this.originalSpeedY = this.speed.y
     this.maxSpeed = 20
-    this.acceleration = 1.2
+    this.acceleration = 1.15
     this.deceleration = 1.005
 
     // METHODS
@@ -106,12 +108,12 @@ function Ball(location, radius, direction, speed){
 
     // check if ball is horizontally out
     this.outX = () => (this.x + this.radius > canvas.width ||
-                      this.x - this.radius < 0)
+        this.x - this.radius < 0)
 
     // check if ball is vertically out
     this.outY = () => (this.y + this.radius > canvas.height ||
         this.y - this.radius < 0)
-    
+
     this.move = function () {
 
         // x direction
@@ -152,7 +154,7 @@ function Ball(location, radius, direction, speed){
     }
 
     this.decelerate = () => {
-        
+
         if (this.speed.x > this.originalSpeedX) {
             this.speed.x /= this.deceleration
         }

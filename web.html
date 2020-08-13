@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.19/lodash.min.js"></script>
+
     <!-- W3 CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -27,49 +30,64 @@
 
 <body>
 
-    <!-- title -->
-    <div class="container">
-        <div style='height:100px'></div>
-        <h1><a href="index.html">Sam Murphy</a></h1>
-    </div>
+<!-- footer solution -->
+<div id="page-container">
+    <div id="content-wrap">
 
-    <!-- subtitle -->
-    <div class="container">
-        <h4>Web dev</h4>
-        <div style='height:20px'></div>
-    </div>
+<!-- title -->
+<div class="container">
+    <div style='height:100px'></div>
+    <h1><a href="index.html">Sam Murphy</a></h1>
+</div>
 
-    <!-- API -->
-    <div class="container">
-    
-        <button type="button" class="btn btn-primary btn-lg btn-block" disabled>REST APIs</button>
-    
-        <div class="row justify-content-center">
-            <a href="https://europe-west2-simple-api-123456.cloudfunctions.net/ocr" target="_blank"
-                rel="noopener noreferrer">
-                <img class="img-fluid" src="images/rest_ocr.png" alt="OCR REST API">
-            </a>
-        </div>
-    </div>
-
-    <div style='height:40px'></div>
-
-
-    <!-- Canvas -->
-    <div class="container">
-        
-        <button type="button" class="btn btn-primary btn-lg btn-block" disabled>Just for fun</button>
-        <canvas id="canvas"></canvas>
-
-        <div class="row justify-content-center">
-            <button id="canvasRestartButton" type="button" class="btn btn-secondary">Refresh</button>
-        </div>    
-    </div>
-
-    
-
-
+<!-- subtitle -->
+<div class="container">
+    <h4>Web dev</h4>
     <div style='height:20px'></div>
+</div>
+
+<!-- API -->
+<div class="container mb-5">
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" disabled>REST APIs</button>
+
+    <div class="row justify-content-center">
+        <a href="https://europe-west2-simple-api-123456.cloudfunctions.net/ocr" target="_blank"
+            rel="noopener noreferrer">
+            <img class="img-fluid" src="images/rest_ocr.png" alt="OCR REST API">
+        </a>
+    </div>
+</div>
+
+<!-- Canvas -->
+<div class="container mb-5">
+    
+    <button type="button" class="btn btn-primary btn-lg btn-block" disabled>Just for fun</button>
+    <canvas id="canvas"></canvas>
+
+    <div class="row justify-content-center">
+        <button id="canvasRestartButton" type="button" class="btn btn-secondary">Refresh</button>
+    </div>    
+</div>
+
+    
+
+</div> <!-- "content-wrap" -->
+
+<!-- footer at bottom of page -->
+<!-- https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ -->
+<footer id="footer" class="footer py-2">
+    <div class="row align-items-center justify-content-center">
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/samsammurphy/" target="_blank"
+            rel="noopener noreferrer"></a>
+        <a class="fa fa-github" href="https://github.com/samsammurphy" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+</footer>
+
+</div> <!-- page-container -->
+
+
+
 <script src="js/canvas.js"></script>
 </body>
 </html>
