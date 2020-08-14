@@ -78,6 +78,15 @@ img {
   display: block; 
 }
 
+.techList {
+  padding:0;
+}
+
+.techList li{
+  display: inline;
+  margin-bottom: 1;
+}
+
 
 /* footer solution */
 /* https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
@@ -99,3 +108,6 @@ img {
   height: 55px;            /* Footer height */
   background-color: #A7E2E3;
 }
+
+
+
