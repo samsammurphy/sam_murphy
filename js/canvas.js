@@ -47,6 +47,8 @@ window.addEventListener('resize', function () {
     rect = canvas.getBoundingClientRect();
     canvas.width = rect.width;
     canvas.height = rect.height;
+
+    main()
 })
 
 // refresh button event listener
