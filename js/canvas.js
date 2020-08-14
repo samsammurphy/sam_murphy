@@ -34,9 +34,6 @@ window.addEventListener('mousedown',
             (event.y > rect.top)
 
         mouse.down = true
-
-        console.log(mouse)
-
     }
 )
 
