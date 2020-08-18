@@ -140,4 +140,6 @@ video {
   height: auto;
 }
 
-
+.logo {
+  max-width: 100px
+}
