@@ -30,8 +30,9 @@ h1, h2, h3, h4, p, a {
   font-family: 'Alata', san-serif;
 }
 
-h5 {
-  font-family: 'Caveat', cursive;
+.subsubtitle {
+  color: rgb(54, 54, 54);
+  margin-top: 2rem
 }
 
 .section_title {
