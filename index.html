@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Press+Start+2P&display=swap" rel="stylesheet">
-    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Press+Start+2P&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Caveat&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -27,52 +27,58 @@
 
 <!-- title -->
 <div class="container">
-    <div style='height:100px'></div>
-    <h1><a href="index.html">Sam Murphy</a></h1>
-    <div style='height:20px'></div>
+  <div style='height:100px'></div>
+  <h1><a href="index.html">Sam Murphy</a></h1>
 </div>
   
 <!-- subtitle -->
+<div class="container mb-4">
+  <h3>Hi, I'm Sam Murphy, my superpowers are image processing and data science</h3>
+</div>
+
+<!-- features -->
 <div class="container">
-  <h2>Hi, I'm Sam Murphy, my superpowers are satellite image processing and data science</h1>
-  <div style='height:20px'></div>
-</div>
+  <h4>Recent projects</h4>
 
-<!-- buttons -->
-<div class='container'>
+  <hr>
+  <h5 class="handwritten">Image Animation</h5>
 
-  <div class="row align-items-center justify-content-center">
-    
-  <div class="col-md-4 my-1">
-    <a class="btn btn-primary btn-lg btn-block" href="/data_science.html">Data Science</a>
-  </div>
+  <video width="864" height="432" controls autoplay>
+    <source src="videos/mona_murphy.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p>A bit of fun playing around with Image Animation using the 
+    <a href="https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation">First Order Model</a>
+    and this <a href="https://github.com/AliaksandrSiarohin/first-order-model">awesome repo</a>
+  </p>
 
-  <div class="col-md-4 my-1">
-    <a class="btn btn-primary btn-lg btn-block" href="/geo.html">Geo</a>
-  </div>
+  <h5 class="handwritten">Monte Carlo Simulations</h5>
 
-  <div class="col-md-4 my-1">
-    <a class="btn btn-primary btn-lg btn-block" href="/web.html">Web</a>
-  </div>
-
-
-  </div>
-
-  <div style='height:20px'></div>
+  <p>Available <a href="https://agile-harbor-40313.herokuapp.com/">here</a>
+</p>
   
-  <!-- other -->
-  <div class="row align-items-center justify-content-center">
-    <a class="" href="/other.html">Other</a>
-  </div>
 
+  
+  <h5 class="handwritten">Fire Detection</h5>
+  <hr>
 </div>
 
-<footer id="footer" class="footer py-2">
+<!-- Projects button -->
+<div class='container'>
+  <a class="btn btn-primary btn-lg" href="/archive.html">Projects</a>
+</div>
+
+<div class="container">
+  <p>add logos here</p>
+  (NASA, Google, Cambridge, EF)
+</div>
+
+<!-- <footer id="footer" class="footer py-2">
   <div class="row align-items-center justify-content-center">
     <a class="fa fa-linkedin" href="https://www.linkedin.com/in/samsammurphy/" target="_blank" rel="noopener noreferrer"></a>
     <a class="fa fa-github" href="https://github.com/samsammurphy" target="_blank" rel="noopener noreferrer"></a>     
   </div>
-</footer>
+</footer> -->
 
 <script src=js/code.js></script>
 <script src="js/footer.js"></script>
