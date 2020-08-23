@@ -18,6 +18,10 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <!-- mapbox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Sam Murphy</title>
@@ -47,39 +51,58 @@
 
   <hr>
 
-  <h4>Image Animation</h4>
+  <div class="row">
 
-  <video width="864" height="432" controls autoplay>
-    <source src="videos/mona_murphy.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <p>A bit of fun playing around with Image Animation using the 
-    <a href="https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation" target="_blank" rel="noopener noreferrer">First Order Model</a>
-    and this <a href="https://github.com/AliaksandrSiarohin/first-order-model" target="_blank" rel="noopener noreferrer">awesome repo</a>
-  </p>
+    <h4>Image Animation</h4>
+    
+    <video width="864" height="432" controls autoplay>
+      <source src="videos/mona_murphy.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>A bit of fun playing around with Image Animation using the
+      <a href="https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation" target="_blank"
+        rel="noopener noreferrer">First Order Model</a>
+      and this <a href="https://github.com/AliaksandrSiarohin/first-order-model" target="_blank"
+        rel="noopener noreferrer">awesome repo</a>
+    </p>
 
-  <hr>
-  <h4>Monte Carlo Simulations</h4>
-
-  <video width="808" height="876" controls>
-    <source src="videos/monte.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <p>Available <a href="https://agile-harbor-40313.herokuapp.com/" target="_blank" rel="noopener noreferrer">here</a>
-  </p>
+  </div>
 
   <hr>
-  
+
+  <div class="row sm-auto">
+
+      <h4>Wildfire statistics map</h4>
+      
+      <div id='map'></div>
+      <div class='map-legend' id='features'>
+          <h2>Burnt Acres</h2>
+          <div id='pd'>
+            <p>Hover over a state!</p>
+          </div>
+        </div>
+      <div class='map-legend' id='legend'></div>
+      
+  </div>
+
+  <hr>
+
+  <div class="row">
+
   <h4>Fire Detection</h4>
-
+  
   <video width="808" height="876" controls>
     <source src="videos/gee_fire.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  
+  <p>Available <a href="https://samsammurphy.users.earthengine.app/view/activefire" target="_blank"
+      rel="noopener noreferrer">here</a>
 
-  <p>Available <a href="https://samsammurphy.users.earthengine.app/view/activefire" target="_blank" rel="noopener noreferrer">here</a>
-  <hr>
+  </div>
+  
+
+    <hr>
 </div>
 
 <hr>
@@ -111,6 +134,7 @@
   </div>
 </footer> -->
 
+<script src="js/map.js"></script>
 <script src=js/code.js></script>
 <script src="js/footer.js"></script>
 
