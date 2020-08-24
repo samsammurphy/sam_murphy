@@ -235,4 +235,10 @@ function main() {
     play()
 }
 
+// sync loading of lodash
+function load_lodash(){
+    typeof _ == "function" ? console.log('lodash loaded') : setTimeout(() => load_lodash(), 250);
+}
+load_lodash()
+
 main()
