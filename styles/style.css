@@ -3,7 +3,7 @@ html, body {
   
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, h5, h6, p, a {
   /* font-family: 'Pangolin', cursive; */
   font-family: 'Alata', san-serif;
 }
@@ -13,7 +13,7 @@ h1 {
   font-weight: bold;
 }
 
-h2, h3, p, .subtitle {
+h2, h3, h5, h6, p, .subtitle {
   color: rgb(94, 94, 94);
 }
 
@@ -25,10 +25,6 @@ h4 {
   color: rgb(70, 70, 70);
 }
 
-h1, h2, h3, h4, p, a {
-  /* font-family: 'Pangolin', cursive; */
-  font-family: 'Alata', san-serif;
-}
 
 .subsubtitle {
   color: rgb(54, 54, 54);
