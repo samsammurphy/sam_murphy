@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 h1 {
   font-size: 5rem;
   font-weight: bold;
+  color:dodgerblue
 }
 
 h2, h3, h4, h5, h6, p, .subtitle {
@@ -38,3 +39,12 @@ p {
 .card-text {
   color: white;
 }
+
+
+.fa-github {
+  color: dodgerblue;
+}
+.fa-linkedin {
+  color: dodgerblue;
+}
+
